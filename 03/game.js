@@ -43,7 +43,7 @@ if (confirm(`${player.name}, сыграем в игру?`)) { // хочет ли
                     case 4:
                         closeCase = "вопроса";
                 }
-                alert(`${player.name}, вы ответили правильно на ${player.correctAnswers} ${closeCase}!`); // поздравлялка
+                alert(`${player.name}, вы ответили правильно на ${player.correctAnswers} ${closeCase} из ${questions.length}!`); // поздравлялка
 
                 if(confirm(`Ну что, ${player.name}, еще разок?`)) {
                 // если пользователь хочет еще, даем еще
