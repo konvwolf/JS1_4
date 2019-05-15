@@ -4,7 +4,6 @@ if (confirm(`${player.name}, сыграем в игру?`)) { // хочет ли
      * рекурсивна.
      */
     function playGame() {
-    // играем
         for (let i = questions.length, questNum = 0; i >= 0; i--, questNum++) { // перебираю массив с вопросами
             if (questions[questNum] !== undefined) {
                 let variants = "", varNum = 1;
@@ -46,16 +45,16 @@ if (confirm(`${player.name}, сыграем в игру?`)) { // хочет ли
                 alert(`${player.name}, вы ответили правильно на ${player.correctAnswers} ${closeCase} из ${questions.length}!`); // поздравлялка
 
                 if(confirm(`Ну что, ${player.name}, еще разок?`)) {
-                // если пользователь хочет еще, даем еще
-                    player.correctAnswers = 0;
-                    playGame();
+                // если пользователь хочет еще, даю еще
+                    player.correctAnswers = 0; // обнуляю счетчик правильных вопросов
+                    playGame(); // играем
                 } else {
                     alert("Пока-пока!");
                 }
             }
         };
     };
-    playGame();
+    playGame(); // играем
 } else {
     alert("Пока-пока!");
 }
